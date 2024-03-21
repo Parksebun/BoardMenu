@@ -13,7 +13,7 @@
 </head>
 <body>
   <main>
-	<h2>Home(수정)</h2>
+	<h2>Home(수정22222)</h2>
 	<div><a href="/Menus/WriteForm">새 메뉴 추가</a></div>
 	<div><a href="/Menus/List">메뉴 목록</a></div>
   </main>	
