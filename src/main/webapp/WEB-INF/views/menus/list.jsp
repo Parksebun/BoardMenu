@@ -57,6 +57,7 @@
 	    <tr>
 	      <td colspan="5">
 	        [<a href="/Menus/WriteForm">메뉴 등록</a>]	      
+	        [<a href="/Menus/WriteForm2">메뉴 등록2</a>] 	      
 	      </td>
 	    </tr>
 	    
@@ -65,8 +66,8 @@
 	      <td>${ menu.menu_id    }</td>
 	      <td>${ menu.menu_name  }</td>
 	      <td>${ menu.menu_seq   }</td>	      
-	      <td><a href="/Menus/Delete?menu_id=MENU01">삭제</a></td>	      
-	      <td><a href="#">수정</a></td>
+	      <td><a href="/Menus/Delete?menu_id=${ menu.menu_id }">삭제</a></td>	      
+	      <td><a href="/Menus/UpdateForm?menu_id=${ menu.menu_id }">수정</a></td>
 	    </tr>
 	    </c:forEach>
 	    

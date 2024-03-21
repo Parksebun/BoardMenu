@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.board.menus.domain.MenuVo;
 import com.board.menus.mapper.MenuMapper;
@@ -51,22 +52,61 @@ public class MenuController {
 		// menuMapper.insertMenu(menu_id, menu_name, menu_seq); // error
 		
 		
-		return "menus/list";    // menus/list.jsp  
+		return "redirect:/Menus/List";    // menus/list.jsp  
+	}
+	//------------------------------------------
+	//"/Menus/WriteForm2"
+	@RequestMapping("/WriteForm2")
+	public String witeFrom2() {
+		return "menu/wirte2.jsp";
+		
 	}
 	
-	//메뉴삭제 /Menus/Delete
-	@RequestMapping("/Delete")
-	public String delete( MenuVo MenuVo, Model model ) {
+	@RequestMapping("/Write2")
+		public String write2(MenuVo menuVo, Model model ) {
+		menuMapper.insertMenuByname(menuVo);
 		
-		menuMapper.deleteMenu(MenuVo);
 		
 		return "redirect:/Menus/List";
+	}
+	
+	
+	
+	//-----------------------------
+	//메뉴삭제
+	@RequestMapping("/Delete")
+	@ResponseBody
+	public String delete( MenuVo menuVo) {
+		
+		menuMapper.deleteMenu( menuVo );
+		
+		String html = "<script>";
+		html		+="alert('삭제됨');";
+		html		+="location.href='/Menus/List';";
+		html		+= "</script>";
+		return html;
+		
+	}
+	//----------------------------------------------------------------수ㅜㅜㅜㅜ저어ㅓㅓㅓ엉
+	@RequestMapping("/UpdateForm")
+	public String updateForm( MenuVo menuvo) {
+		
+		
+		
+		return "/menus/update";
+	}
+	
+	@RequestMapping("/Update")
+	public String update( MenuVo menuVo) {
+		
+		return "redirect:/Menus/List";
+	}
 		
 		
 	}
 	
 	
-}
+
 
 
 

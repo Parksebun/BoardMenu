@@ -16,6 +16,11 @@
           )   
   </insert> 
   
+  <insert id="insertMenuByname">
+  
+  INSERT INTO 
+  
+  </insert>
   <select id="getMenuList"
   		resultType= "com.board.menus.domain.MenuVo">
   
