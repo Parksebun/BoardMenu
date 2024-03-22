@@ -33,11 +33,21 @@
   <main>
 	<h2>메뉴 등록</h2>
 	<form action="/Menus/Write2" method="GET">
+<<<<<<< HEAD
 	<table>	
 	 <tr>
 	   <td>메뉴 이름</td>
 	   <td><input type="text" name="menu_name" /></td>
 	 </tr>	
+=======
+	<table>
+	 
+	 <tr>
+	   <td>메뉴 이름</td>
+	   <td><input type="text" name="menu_name" /></td>
+	 </tr>
+	 
+>>>>>>> 9b85d3e254b73402f1933fc7c891b4584f7eaef1
 	 <tr>
 	   <td colspan="2">
 	    <input type="submit" value="추가" />

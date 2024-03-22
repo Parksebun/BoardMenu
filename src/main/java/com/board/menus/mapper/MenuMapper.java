@@ -19,9 +19,13 @@ public interface MenuMapper {
 
 	void deleteMenu(MenuVo menuVo);
 
+<<<<<<< HEAD
 	void insertMenuByName(MenuVo menuVo);
 
 	MenuVo getMenu(String menu_id);
+=======
+	void insertMenuByname(MenuVo menuVo);
+>>>>>>> 9b85d3e254b73402f1933fc7c891b4584f7eaef1
 
 	
 }

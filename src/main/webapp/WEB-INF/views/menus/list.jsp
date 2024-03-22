@@ -32,7 +32,11 @@
   /*
   tr:first-child > td {
      border-color : white;
+<<<<<<< HEAD
   }  
+=======
+  }
+>>>>>>> 9b85d3e254b73402f1933fc7c891b4584f7eaef1
   */
     
   
@@ -45,7 +49,11 @@
 </head>
 <body>
 	<main>  
+<<<<<<< HEAD
 	  <h2>메뉴 목록(수정2)</h2>
+=======
+	  <h2>메뉴 목록</h2>
+>>>>>>> 9b85d3e254b73402f1933fc7c891b4584f7eaef1
 	  <table>
 	    <tr>
 	      <td>Menu_id</td>
@@ -56,8 +64,13 @@
 	    </tr>
 	    <tr>
 	      <td colspan="5">
+<<<<<<< HEAD
 	        [<a href="/Menus/WriteForm">메뉴 등록</a>]&nbsp;&nbsp;&nbsp;	      
 	        [<a href="/Menus/WriteForm2">메뉴 등록2</a>]	      
+=======
+	        [<a href="/Menus/WriteForm">메뉴 등록</a>]	      
+	        [<a href="/Menus/WriteForm2">메뉴 등록2</a>] 	      
+>>>>>>> 9b85d3e254b73402f1933fc7c891b4584f7eaef1
 	      </td>
 	    </tr>
 	    

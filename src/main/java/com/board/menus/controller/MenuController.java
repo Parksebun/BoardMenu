@@ -26,12 +26,19 @@ public class MenuController {
 				
 		// 조회 결과를 넘겨준다 ( Model )
 		model.addAttribute( "menuList", menuList );
+<<<<<<< HEAD
 		//System.out.println( "MenuController list() menuList:" + menuList );
+=======
+		System.out.println( "MenuController list() menuList:" + menuList );
+>>>>>>> 9b85d3e254b73402f1933fc7c891b4584f7eaef1
 		
 		return "menus/list";
 	}
 	
+<<<<<<< HEAD
 	//-------------------
+=======
+>>>>>>> 9b85d3e254b73402f1933fc7c891b4584f7eaef1
 	
 	// 메뉴 입력받는 화면  /Menus/WriteForm
 	//@RequestMapping("/Menus/WriteForm")
@@ -39,7 +46,11 @@ public class MenuController {
 	public   String   writeForm() {
 		return "menus/write";  // /WEB-INF/views/ + menus/write + .jsp`
 	}
+<<<<<<< HEAD
 			
+=======
+		
+>>>>>>> 9b85d3e254b73402f1933fc7c891b4584f7eaef1
 	// 메뉴 저장
 	// /Menus/Write?menu_id=MENU02&menu_name=JSP&menu_seq=2
 	//@RequestMapping("/Menus/Write")
@@ -52,6 +63,7 @@ public class MenuController {
 		menuMapper.insertMenu( menuVo );
 		// menuMapper.insertMenu(menu_id, menu_name, menu_seq); // error
 		
+<<<<<<< HEAD
 		return  "redirect:/Menus/List";
 		
 		//List<MenuVo>  menuList = menuMapper.getMenuList();
@@ -66,10 +78,21 @@ public class MenuController {
 	public  String  writeForm2() {
 		
 		return "menus/write2";
+=======
+		
+		return "redirect:/Menus/List";    // menus/list.jsp  
+	}
+	//------------------------------------------
+	//"/Menus/WriteForm2"
+	@RequestMapping("/WriteForm2")
+	public String witeFrom2() {
+		return "menu/wirte2.jsp";
+>>>>>>> 9b85d3e254b73402f1933fc7c891b4584f7eaef1
 		
 	}
 	
 	@RequestMapping("/Write2")
+<<<<<<< HEAD
 	public  String  write2(MenuVo menuVo) {
 		// 저장
 		menuMapper.insertMenuByName( menuVo  );
@@ -142,6 +165,52 @@ public class MenuController {
 	}
 	
 }
+=======
+		public String write2(MenuVo menuVo, Model model ) {
+		menuMapper.insertMenuByname(menuVo);
+		
+		
+		return "redirect:/Menus/List";
+	}
+	
+	
+	
+	//-----------------------------
+	//메뉴삭제
+	@RequestMapping("/Delete")
+	@ResponseBody
+	public String delete( MenuVo menuVo) {
+		
+		menuMapper.deleteMenu( menuVo );
+		
+		String html = "<script>";
+		html		+="alert('삭제됨');";
+		html		+="location.href='/Menus/List';";
+		html		+= "</script>";
+		return html;
+		
+	}
+	//----------------------------------------------------------------수ㅜㅜㅜㅜ저어ㅓㅓㅓ엉
+	@RequestMapping("/UpdateForm")
+	public String updateForm( MenuVo menuvo) {
+		
+		
+		
+		return "/menus/update";
+	}
+	
+	@RequestMapping("/Update")
+	public String update( MenuVo menuVo) {
+		
+		return "redirect:/Menus/List";
+	}
+		
+		
+	}
+	
+	
+
+>>>>>>> 9b85d3e254b73402f1933fc7c891b4584f7eaef1
 
 
 

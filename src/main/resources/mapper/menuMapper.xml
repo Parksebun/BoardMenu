@@ -16,6 +16,7 @@
           )   
   </insert> 
   
+<<<<<<< HEAD
   <insert  id="insertMenuByName">
   	
   	INSERT  INTO  MENUS  ( 
@@ -34,6 +35,15 @@
   
   <select id="getMenuList"  
       resultType="com.board.menus.domain.MenuVo">
+=======
+  <insert id="insertMenuByname">
+  
+  INSERT INTO 
+  
+  </insert>
+  <select id="getMenuList"
+  		resultType= "com.board.menus.domain.MenuVo">
+>>>>>>> 9b85d3e254b73402f1933fc7c891b4584f7eaef1
   
   	SELECT     MENU_ID, MENU_NAME, MENU_SEQ
   	 FROM      MENUS
@@ -41,12 +51,20 @@
   
   </select>
   
+<<<<<<< HEAD
   <delete id = "deleteMenu">
   	
   	DELETE  FROM  MENUS
   	 WHERE  MENU_ID = #{ menu_id  }
   	
   </delete>
+=======
+  <delete id="deleteMenu">
+  
+  DELETE  FROM MENUS
+   WHERE  MENU_ID = #{menu_id}
+   </delete>
+>>>>>>> 9b85d3e254b73402f1933fc7c891b4584f7eaef1
   
 </mapper>
 

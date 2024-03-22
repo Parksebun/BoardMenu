@@ -32,6 +32,7 @@
 <body>
   <main>
 	<h2>메뉴 수정</h2>
+<<<<<<< HEAD
 	<form action="/Menus/Update" method="GET">
 	<table>
 	 <tr>
@@ -46,6 +47,16 @@
 	   <td>메뉴 순서</td>
 	   <td><input type="text" name="menu_seq" value = "${ menu.menu_seq }"/></td>
 	 </tr>
+=======
+	<form action="/Menus/update" method="GET">
+	<table>
+	 
+	 <tr>
+	   <td>메뉴 이름</td>
+	   <td><input type="text" name="menu_name" /></td>
+	 </tr>
+	 
+>>>>>>> 9b85d3e254b73402f1933fc7c891b4584f7eaef1
 	 <tr>
 	   <td colspan="2">
 	    <input type="submit" value="수정" />
